@@ -7,21 +7,13 @@ import sys
 # lexicographically minimal string. Returns an integer detailing 
 # the degree of rotation needed
 def find_rotate_offset(input_str):
-    input_str = input_str.lower()
-    offset = 0
-    curr_str = input_str
-
-    # Rotate through the string
-    for i in range(len(input_str)):
-        cmp_str = input_str[i:] + input_str[:i]
-        
-        # If the comparison string has a lower lexicographical ordering 
-        # then replace the offset as the offset to return, and replace the 
-        # recurring string
-        if cmp_str < curr_str:
-            curr_str = cmp_str
-            offset = i
-    return offset
+    return min(
+        [
+            (i, input_str[i:] + input_str[:i]) 
+            for i in range(len(input_str.lower()))
+        ], 
+        key = lambda x: x[1]
+    )
 
 def main():
     # Validate command line args
@@ -30,8 +22,7 @@ def main():
 
     for string in sys.argv[1:]:
         offset = find_rotate_offset(string)
-        rot_str = string[offset:] + string[:offset]
-        print(str(offset) + " " + rot_str) 
+        print(offset[0], offset[1])
 
     sys.exit(0)
 

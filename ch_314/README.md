@@ -38,7 +38,9 @@ Which is, in Python parlance, `"aabbccddbbaabb"[10:] + "aabbccddbbaabb"[:10]`.
 	12 amicroscopicsilicovolcanoconiosispneumonoultr
 
 ## Solution
-For the sake of easy string manipulation, this solution was written using Python 3
+For the sake of easy string manipulation, this solution was written using Python 3.
+It uses a simple expression to find the minimum value of all possible slices of 
+the string using `min` and list comprehension
 
 To run the solution:
 
