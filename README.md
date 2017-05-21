@@ -1,5 +1,6 @@
 # Daily Programmer
-[link](https://www.reddit.com/r/dailyprogrammer/)
+[Challenges](https://www.reddit.com/r/dailyprogrammer/)
+
 ## Author
 Afnan Enayet
 
@@ -12,6 +13,6 @@ daily_programmer
  -- ch_x
      -- README (detailing how to compile/run solution)
      -- challenge.txt (a link to the challenge and a copy of the challenge text
-     -- [challenge solutions files]
+     -- [challenge solution files]
 ```
 
